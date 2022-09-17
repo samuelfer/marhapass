@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marhapass/src/pages/auth/signin_screen.dart';
+import 'package:marhapass/src/pages/auth/sign_in_screen.dart';
 import 'package:marhapass/src/pages/login_page.dart';
 import 'package:marhapass/src/pages/profile/profile_screen.dart';
 import 'package:marhapass/src/pages/register_page.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const SigninScreenPage(),
+        '/': (context) => const SignInScreenPage(),
         '/login': (context) => const LoginPage(),
         '/register': (context) => const UserRegisterPage(),
         '/profile': (context) => const ProfileScreen()

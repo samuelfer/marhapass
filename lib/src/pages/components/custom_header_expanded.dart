@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:marhapass/src/config/custom_colors.dart';
 
 class CustomHeaderExpanded extends StatelessWidget {
-  const CustomHeaderExpanded({super.key});
+  const CustomHeaderExpanded({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

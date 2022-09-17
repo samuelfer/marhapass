@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:marhapass/src/pages/auth/sign_up_screen.dart';
 
 import '../components/custom_header_expanded.dart';
 import '../components/custom_text_field.dart';
 
-class SigninScreenPage extends StatefulWidget {
-  const SigninScreenPage({Key? key}) : super(key: key);
+class SignInScreenPage extends StatefulWidget {
+  const SignInScreenPage({Key? key}) : super(key: key);
 
   @override
-  State<SigninScreenPage> createState() => _SigninScreenPageState();
+  State<SignInScreenPage> createState() => _SignInScreenPageState();
 }
 
-class _SigninScreenPageState extends State<SigninScreenPage> {
+class _SignInScreenPageState extends State<SignInScreenPage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -127,7 +128,15 @@ class _SigninScreenPageState extends State<SigninScreenPage> {
                             color: Colors.grey,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return SignUpScreen();
+                              },
+                            ),
+                          );
+                        },
                         child: const Text(
                           "Cadastre-se",
                           style: TextStyle(
