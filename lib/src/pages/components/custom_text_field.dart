@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 class CustomTextFied extends StatefulWidget {
   final IconData icon;
   final String label;
-  bool isObscure = false;
   final bool isSecret;
 
-  CustomTextFied({
+  const CustomTextFied({
     Key? key,
     required this.icon,
     required this.label,
@@ -18,22 +17,31 @@ class CustomTextFied extends StatefulWidget {
 }
 
 class _CustomTextFiedState extends State<CustomTextFied> {
+  bool isObscure = false;
+
+  @override
+  void initState() {
+    super.initState();
+    isObscure = widget.isSecret;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: TextFormField(
-        obscureText: widget.isObscure,
+        obscureText: isObscure,
         decoration: InputDecoration(
             prefixIcon: Icon(widget.icon),
-            suffixIcon: widget.isObscure
+            suffixIcon: widget.isSecret
                 ? IconButton(
                     onPressed: () {
                       setState(() {
-                        widget.isObscure = !widget.isObscure;
+                        isObscure = !isObscure;
                       });
                     },
-                    icon: const Icon(Icons.visibility),
+                    icon: Icon(
+                        isObscure ? Icons.visibility_off : Icons.visibility),
                   )
                 : null,
             labelText: widget.label,

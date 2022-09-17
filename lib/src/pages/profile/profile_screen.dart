@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:marhapass/src/pages/components/custom_text_field.dart';
 import 'package:marhapass/src/config/app_data.dart' as appData;
 
-class Profile extends StatelessWidget {
-  const Profile({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pefil'),
+        title: const Text('Perfil'),
         actions: [
           IconButton(
             onPressed: () {},
@@ -20,7 +20,7 @@ class Profile extends StatelessWidget {
       body: ListView(
         physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
-        children: [
+        children: const [
           //Email
           CustomTextFied(
             icon: Icons.email,
