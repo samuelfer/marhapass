@@ -26,7 +26,7 @@ class _CustomTextFiedState extends State<CustomTextFied> {
         obscureText: widget.isObscure,
         decoration: InputDecoration(
             prefixIcon: Icon(widget.icon),
-            suffixIcon: widget.isObscure
+            suffixIcon: widget.isSecret
                 ? IconButton(
                     onPressed: () {
                       setState(() {

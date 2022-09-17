@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marhapass/src/pages/login_page.dart';
+import 'package:marhapass/src/pages/auth/signin_page.dart';
 import 'package:marhapass/src/pages/profile/profile.dart';
 import 'package:marhapass/src/pages/register_page.dart';
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Meu App de Senhas',
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const LoginPage(),
+        '/': (context) => const SigninPage(),
         '/register': (context) => const UserRegisterPage(),
         '/profile': (context) => const Profile()
       },
