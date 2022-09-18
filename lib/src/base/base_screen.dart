@@ -1,34 +1,55 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
 import 'package:flutter/material.dart';
 
-class BaseScreen extends StatelessWidget {
+class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
+
+  @override
+  State<BaseScreen> createState() => _BaseScreenState();
+}
+
+class _BaseScreenState extends State<BaseScreen> {
+  int currentIndex = 0;
+  final pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.red,
+      body: PageView(
+        physics: const NeverScrollableScrollPhysics(),
+        controller: pageController,
+        children: [
+          Container(color: Colors.yellow),
+          Container(color: Colors.blue),
+          Container(color: Colors.green),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.grey[200],
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.list),
-              label: 'Senhas',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline),
-              label: 'Perfil',
-            ),
-          ]),
+        currentIndex: currentIndex,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+            pageController.jumpToPage(index);
+          });
+        },
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.grey[200],
+        selectedItemColor: Colors.purple,
+        unselectedItemColor: Colors.grey,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_outlined),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'Senhas',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            label: 'Perfil',
+          ),
+        ],
+      ),
     );
   }
 }
