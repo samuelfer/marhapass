@@ -1,8 +1,8 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:marhapass/src/config/custom_colors.dart';
-
 import 'components/category_tile.dart';
+import 'package:marhapass/src/config/app_data.dart' as appData;
 
 class HomeTab extends StatefulWidget {
   HomeTab({super.key});
@@ -12,14 +12,6 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
-  List<String> categories = [
-    'Java',
-    'Php',
-    'Angular',
-    'Sql',
-    'Metodologias',
-  ];
-
   String selectedCategory = 'Java';
 
   @override
@@ -118,16 +110,16 @@ class _HomeTabState extends State<HomeTab> {
             height: 40,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemCount: categories.length,
+              itemCount: appData.categories.length,
               itemBuilder: (_, index) {
                 return CategoryTile(
                   onPressed: () {
                     setState(() {
-                      selectedCategory = categories[index];
+                      selectedCategory = appData.categories[index];
                     });
                   },
-                  category: categories[index],
-                  isSelected: categories[index] == selectedCategory,
+                  category: appData.categories[index],
+                  isSelected: appData.categories[index] == selectedCategory,
                 );
               },
               separatorBuilder: (_, index) => const SizedBox(width: 10),
