@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marhapass/src/base/base_screen.dart';
+import 'package:marhapass/src/pages/base/base_screen.dart';
 import 'package:marhapass/src/pages/auth/sign_in_screen.dart';
 import 'package:marhapass/src/pages/home/home_tab.dart';
 import 'package:marhapass/src/pages/login_page.dart';

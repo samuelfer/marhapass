@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marhapass/src/base/base_screen.dart';
+import 'package:marhapass/src/pages/base/base_screen.dart';
 import 'package:marhapass/src/pages/auth/sign_up_screen.dart';
 
 import '../components/custom_header_expanded.dart';
