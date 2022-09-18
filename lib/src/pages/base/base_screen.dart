@@ -19,8 +19,9 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          HomeTab(),
-          Container(color: Colors.blue),
+          const HomeTab(),
+          const HomeTab(),
+          Container(color: Colors.red),
           Container(color: Colors.green),
         ],
       ),
@@ -34,12 +35,16 @@ class _BaseScreenState extends State<BaseScreen> {
         },
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.grey[200],
-        selectedItemColor: Colors.purple,
+        selectedItemColor: Colors.green,
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school_outlined),
+            label: 'Certificados',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),

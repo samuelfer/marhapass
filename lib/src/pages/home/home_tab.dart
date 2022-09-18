@@ -4,8 +4,10 @@ import 'package:marhapass/src/config/custom_colors.dart';
 import 'components/category_tile.dart';
 import 'package:marhapass/src/config/app_data.dart' as appData;
 
+import 'components/item_tile.dart';
+
 class HomeTab extends StatefulWidget {
-  HomeTab({super.key});
+  const HomeTab({super.key});
 
   @override
   State<HomeTab> createState() => _HomeTabState();
@@ -61,7 +63,7 @@ class _HomeTabState extends State<HomeTab> {
                   ),
                 ),
                 child: const Icon(
-                  Icons.account_box_outlined,
+                  Icons.school,
                   color: Colors.green,
                 ),
               ),
@@ -125,7 +127,27 @@ class _HomeTabState extends State<HomeTab> {
               separatorBuilder: (_, index) => const SizedBox(width: 10),
             ),
           ),
+
           //Grid
+          Expanded(
+            child: GridView.builder(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+              physics:
+                  const BouncingScrollPhysics(), //animacao ao rolar verticalmente
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: 9 / 10.5, //altera o eixo vertical grid
+              ),
+              itemCount: appData.items.length,
+              itemBuilder: (_, index) {
+                return ItemTile(
+                  item: appData.items[index],
+                );
+              },
+            ),
+          )
         ],
       ),
     );

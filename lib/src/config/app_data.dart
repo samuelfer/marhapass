@@ -14,7 +14,7 @@ import '../models/item_model.dart';
 ItemModel java = ItemModel(
   itemName: 'Spring Boot',
   institution: 'Alura',
-  image: '',
+  image: 'assets/images/java.jpg',
   description: 'Curso Sring Security',
   period: '2022',
 );
@@ -22,15 +22,15 @@ ItemModel java = ItemModel(
 ItemModel php = ItemModel(
   itemName: 'Laravel Rest api',
   institution: 'Alura',
-  image: '',
+  image: 'assets/images/php.png',
   description: 'Curso de Api Rest com Laravel',
   period: '2022',
 );
 
 ItemModel sql = ItemModel(
-  itemName: 'Segunrança no Sql',
+  itemName: 'Segurança no Sql',
   institution: 'Alura',
-  image: '',
+  image: 'assets/images/sql.png',
   description: 'Curso de Segurança no Postgres',
   period: '2022',
 );
@@ -38,7 +38,7 @@ ItemModel sql = ItemModel(
 ItemModel front = ItemModel(
   itemName: 'Angular Observables',
   institution: 'Alura',
-  image: '',
+  image: 'assets/images/angular.png',
   description: 'Curso de Observables no angular',
   period: '2022',
 );
