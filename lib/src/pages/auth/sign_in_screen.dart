@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marhapass/src/base/base_screen.dart';
 import 'package:marhapass/src/pages/auth/sign_up_screen.dart';
 
 import '../components/custom_header_expanded.dart';
@@ -58,7 +59,15 @@ class _SignInScreenPageState extends State<SignInScreenPage> {
                           ),
                           backgroundColor: const Color.fromRGBO(63, 81, 126, 5),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const BaseScreen();
+                              },
+                            ),
+                          );
+                        },
                         child: const Text(
                           "Entrar",
                           style: TextStyle(
