@@ -15,7 +15,7 @@ ItemModel java = ItemModel(
   itemName: 'Spring Boot',
   institution: 'Alura',
   image: 'assets/images/java.jpg',
-  description: 'Curso Sring Security',
+  description: 'Curso Spring Security',
   period: '2022',
 );
 
