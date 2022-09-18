@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:marhapass/src/pages/models/user_model.dart';
+import 'package:marhapass/src/models/user_model.dart';
 
 class APIService {
   static var client = http.Client();

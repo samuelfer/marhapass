@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marhapass/src/pages/models/api_service.dart';
-import 'package:marhapass/src/pages/models/user_model.dart';
+import 'package:marhapass/src/models/api_service.dart';
+import 'package:marhapass/src/models/user_model.dart';
 import 'package:snippet_coder_utils/FormHelper.dart';
 import 'package:snippet_coder_utils/ProgressHUD.dart';
 import 'package:snippet_coder_utils/hex_color.dart';

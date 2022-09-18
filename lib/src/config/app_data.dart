@@ -1,4 +1,4 @@
-import 'package:marhapass/src/pages/models/user_model.dart';
+import 'package:marhapass/src/models/user_model.dart';
 
 class AppData {
   UserModel user = UserModel(
