@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const HomeTab(),
+        '/': (context) => HomeTab(),
         '/login': (context) => const LoginPage(),
         '/register': (context) => const UserRegisterPage(),
         '/profile': (context) => const ProfileScreen()
