@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marhapass/src/config/custom_colors.dart';
 import 'package:marhapass/src/models/item_model.dart';
 
 class CertificateScreen extends StatelessWidget {
@@ -121,9 +122,9 @@ class CertificateScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                icon: const Icon(
+                icon: Icon(
                   Icons.arrow_back_ios,
-                  color: Colors.green,
+                  color: CustomColors.customColorPrimary,
                 ),
               ),
             ),

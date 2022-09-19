@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:marhapass/src/config/custom_colors.dart';
+import 'package:marhapass/src/config/app_data.dart' as appData;
+import 'package:marhapass/src/pages/home/home_tab.dart';
+
+import '../auth/sign_up_screen.dart';
+import 'components/pass_tile.dart';
 
 class PasswordTab extends StatelessWidget {
   const PasswordTab({super.key});
@@ -26,32 +31,38 @@ class PasswordTab extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Expanded(
-            child: Placeholder(
-              color: Colors.red,
+          Expanded(
+            child: ListView.builder(
+              itemCount: appData.passwordItems.length,
+              itemBuilder: (_, index) {
+                return PassTile(passItem: appData.passwordItems[index]);
+              },
             ),
           ),
-          const SizedBox(height: 20),
-          Container(
-            padding: const EdgeInsets.only(bottom: 10),
-            decoration: const BoxDecoration(
-              color: Colors.transparent,
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(30),
-              ),
-            ),
-            child: SizedBox(
-              height: 30,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18),
-                  ),
+
+          //Botao cadastrar novo
+          SizedBox(
+            height: 40,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18),
                 ),
-                onPressed: () {},
-                child: const Text(
-                  'Novo cadastro',
-                  style: TextStyle(fontSize: 18),
+                backgroundColor: const Color.fromRGBO(63, 81, 126, 5),
+              ),
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const HomeTab();
+                    },
+                  ),
+                );
+              },
+              child: const Text(
+                "Cadastrar novo",
+                style: TextStyle(
+                  fontSize: 18,
                 ),
               ),
             ),
