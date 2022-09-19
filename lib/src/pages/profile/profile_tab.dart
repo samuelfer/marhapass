@@ -22,7 +22,7 @@ class ProfileTab extends StatelessWidget {
               Column(
                 children: [
                   //Header
-                  const CustomHeaderExpanded(),
+                  const CustomHeaderExpanded(title: 'Perfil'),
 
                   //Formulario
                   Container(

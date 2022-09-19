@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:marhapass/src/config/custom_colors.dart';
 
-class CustomHeaderExpanded extends StatelessWidget {
+class CustomHeaderExpanded extends StatefulWidget {
+  final String title;
   const CustomHeaderExpanded({
     super.key,
+    this.title = '',
   });
+
+  @override
+  State<CustomHeaderExpanded> createState() => _CustomHeaderExpandedState();
+}
+
+class _CustomHeaderExpandedState extends State<CustomHeaderExpanded> {
+  String subtitle = '';
+  @override
+  void initState() {
+    super.initState();
+    subtitle = widget.title;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +43,8 @@ class CustomHeaderExpanded extends StatelessWidget {
         //Nome do app
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text.rich(
+          children: [
+            const Text.rich(
               TextSpan(
                 style: TextStyle(
                   fontSize: 40,
@@ -39,7 +53,7 @@ class CustomHeaderExpanded extends StatelessWidget {
                 ),
                 children: [
                   TextSpan(
-                    text: "Marha",
+                    text: 'Marha',
                   ),
                   TextSpan(
                     text: "App",
@@ -50,6 +64,13 @@ class CustomHeaderExpanded extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Text(
+              subtitle,
+              style: const TextStyle(
+                fontSize: 18,
+                color: Colors.white,
               ),
             ),
           ],
