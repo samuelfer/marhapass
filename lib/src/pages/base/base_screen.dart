@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:marhapass/src/pages/auth/sign_in_screen.dart';
 import 'package:marhapass/src/pages/home/home_tab.dart';
 
-import '../passwords/pass_screen.dart';
+import '../passwords/pass_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
@@ -22,9 +22,9 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          const SignInScreenPage(),
           const HomeTab(),
-          const PasswordScreen(),
+          const HomeTab(),
+          const PasswordTab(),
           Container(color: Colors.green),
         ],
       ),

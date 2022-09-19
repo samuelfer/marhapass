@@ -1,3 +1,4 @@
+import 'package:marhapass/src/config/password_item_model.dart';
 import 'package:marhapass/src/models/user_model.dart';
 
 import '../models/item_model.dart';
@@ -15,7 +16,9 @@ ItemModel java = ItemModel(
   itemName: 'Spring Boot',
   institution: 'Alura',
   image: 'assets/images/java.jpg',
-  description: 'Curso Spring Security',
+  title: 'Curso Spring Security',
+  description:
+      'a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passagesa galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages',
   period: '2022',
 );
 
@@ -23,7 +26,9 @@ ItemModel php = ItemModel(
   itemName: 'Laravel Rest api',
   institution: 'Alura',
   image: 'assets/images/php.png',
-  description: 'Curso de Api Rest com Laravel',
+  title: 'Curso de Api Rest com Laravel',
+  description:
+      'a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages',
   period: '2022',
 );
 
@@ -31,7 +36,9 @@ ItemModel sql = ItemModel(
   itemName: 'Segurança no Sql',
   institution: 'Alura',
   image: 'assets/images/sql.png',
-  description: 'Curso de Segurança no Postgres',
+  title: 'Curso de Segurança no Postgres',
+  description:
+      'a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages',
   period: '2022',
 );
 
@@ -39,7 +46,9 @@ ItemModel front = ItemModel(
   itemName: 'Angular Observables',
   institution: 'Alura',
   image: 'assets/images/angular.png',
-  description: 'Curso de Observables no angular',
+  title: 'Curso de Observables no angular',
+  description:
+      'a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages',
   period: '2022',
 );
 
@@ -51,6 +60,12 @@ List<String> categories = [
   'Front',
   'Sql',
   'Metodologias',
+];
+
+List<PasswordItemModel> passwordItems = [
+  PasswordItemModel(item: java, quantity: 2),
+  PasswordItemModel(item: php, quantity: 2),
+  PasswordItemModel(item: front, quantity: 2),
 ];
 
 // }
