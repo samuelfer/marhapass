@@ -34,25 +34,29 @@ class ProfileTab extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         //Email
-                        const CustomTextFied(
+                        CustomTextFied(
+                          initialValue: appData.user.email,
                           icon: Icons.email,
                           label: 'Email',
                         ),
 
                         //Nome
-                        const CustomTextFied(
+                        CustomTextFied(
+                          initialValue: appData.user.name,
                           icon: Icons.person,
                           label: 'Nome',
                         ),
 
                         //Celular
-                        const CustomTextFied(
+                        CustomTextFied(
+                          initialValue: appData.user.phone,
                           icon: Icons.phone,
                           label: 'Celular',
                         ),
 
                         //CPF
-                        const CustomTextFied(
+                        CustomTextFied(
+                          initialValue: appData.user.cpf,
                           icon: Icons.file_copy,
                           label: 'CPF',
                           isSecret: true,

@@ -1,18 +1,18 @@
 import 'dart:convert';
 
 class UserModel {
-  String nome;
+  String name;
   String email;
-  String celular;
+  String phone;
   String cpf;
   String senha;
 
   UserModel({
-    required this.nome,
+    required this.name,
     required this.email,
     required this.senha,
     required this.cpf,
-    required this.celular,
+    required this.phone,
   });
 
   // UserModel.fromJson(Map<String, dynamic> json) {

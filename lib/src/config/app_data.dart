@@ -3,14 +3,13 @@ import 'package:marhapass/src/models/user_model.dart';
 
 import '../models/item_model.dart';
 
-// class AppData {
-//   UserModel user = UserModel(
-//     nome: 'Samuel',
-//     email: 'samuel@gmail.com',
-//     senha: '',
-//     cpf: '00000000000',
-//     celular: '11111111111',
-//   );
+UserModel user = UserModel(
+  name: 'Samuel',
+  email: 'samuel@gmail.com',
+  senha: '',
+  cpf: '00000000000',
+  phone: '11111111111',
+);
 
 ItemModel java = ItemModel(
   itemName: 'Spring Boot',
@@ -67,5 +66,3 @@ List<PasswordItemModel> passwordItems = [
   PasswordItemModel(item: php, quantity: 2),
   PasswordItemModel(item: front, quantity: 2),
 ];
-
-// }
