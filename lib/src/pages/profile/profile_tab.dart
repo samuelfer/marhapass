@@ -35,6 +35,7 @@ class ProfileTab extends StatelessWidget {
                       children: [
                         //Email
                         CustomTextFied(
+                          readOnly: true,
                           initialValue: appData.user.email,
                           icon: Icons.email,
                           label: 'Email',
@@ -62,7 +63,7 @@ class ProfileTab extends StatelessWidget {
                           isSecret: true,
                         ),
 
-                        //Botao entrar
+                        //Botao atualizar
                         SizedBox(
                           height: 40,
                           child: ElevatedButton(
@@ -74,7 +75,7 @@ class ProfileTab extends StatelessWidget {
                             ),
                             onPressed: () {},
                             child: const Text(
-                              "Cadastrar",
+                              "Atualizar",
                               style: TextStyle(
                                 fontSize: 18,
                               ),
