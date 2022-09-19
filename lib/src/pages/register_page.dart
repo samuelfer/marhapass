@@ -21,7 +21,7 @@ class _UserRegisterPageState extends State<UserRegisterPage> {
   bool hidePassword = true;
   bool hideConfirmPassword = true;
   UserModel userModel =
-      new UserModel(celular: '', cpf: '', email: '', nome: '', senha: '');
+      new UserModel(phone: '', cpf: '', email: '', name: '', senha: '');
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +112,7 @@ class _UserRegisterPageState extends State<UserRegisterPage> {
             return null;
           },
           (onSavedVal) {
-            this.userModel.nome = onSavedVal;
+            this.userModel.name = onSavedVal;
           },
           initialValue: "",
           paddingBottom: 20,
