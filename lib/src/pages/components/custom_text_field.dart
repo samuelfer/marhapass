@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomTextFied extends StatefulWidget {
   final IconData icon;
   final String label;
-  bool isObscure = false;
   final bool isSecret;
+  final List<TextInputFormatter>? inputFormatters;
+  final String? initialValue;
+  final bool readOnly;
 
-  CustomTextFied({
+  const CustomTextFied({
     Key? key,
     required this.icon,
     required this.label,
     this.isSecret = false,
+    this.inputFormatters,
+    this.initialValue,
+    this.readOnly = false,
   }) : super(key: key);
 
   @override
@@ -18,22 +24,34 @@ class CustomTextFied extends StatefulWidget {
 }
 
 class _CustomTextFiedState extends State<CustomTextFied> {
+  bool isObscure = false;
+
+  @override
+  void initState() {
+    super.initState();
+    isObscure = widget.isSecret;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: TextFormField(
-        obscureText: widget.isObscure,
+        readOnly: widget.readOnly,
+        initialValue: widget.initialValue,
+        inputFormatters: widget.inputFormatters,
+        obscureText: isObscure,
         decoration: InputDecoration(
             prefixIcon: Icon(widget.icon),
             suffixIcon: widget.isSecret
                 ? IconButton(
                     onPressed: () {
                       setState(() {
-                        widget.isObscure = !widget.isObscure;
+                        isObscure = !isObscure;
                       });
                     },
-                    icon: const Icon(Icons.visibility),
+                    icon: Icon(
+                        isObscure ? Icons.visibility_off : Icons.visibility),
                   )
                 : null,
             labelText: widget.label,

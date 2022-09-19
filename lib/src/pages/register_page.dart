@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marhapass/src/pages/models/api_service.dart';
-import 'package:marhapass/src/pages/models/user_model.dart';
+import 'package:marhapass/src/models/api_service.dart';
+import 'package:marhapass/src/models/user_model.dart';
 import 'package:snippet_coder_utils/FormHelper.dart';
 import 'package:snippet_coder_utils/ProgressHUD.dart';
 import 'package:snippet_coder_utils/hex_color.dart';
@@ -21,7 +21,7 @@ class _UserRegisterPageState extends State<UserRegisterPage> {
   bool hidePassword = true;
   bool hideConfirmPassword = true;
   UserModel userModel =
-      new UserModel(celular: '', cpf: '', email: '', nome: '', senha: '');
+      new UserModel(phone: '', cpf: '', email: '', name: '', senha: '');
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +112,7 @@ class _UserRegisterPageState extends State<UserRegisterPage> {
             return null;
           },
           (onSavedVal) {
-            this.userModel.nome = onSavedVal;
+            this.userModel.name = onSavedVal;
           },
           initialValue: "",
           paddingBottom: 20,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marhapass/src/pages/auth/signin_page.dart';
-import 'package:marhapass/src/pages/profile/profile.dart';
+import 'package:marhapass/src/pages/auth/sign_in_screen.dart';
+import 'package:marhapass/src/pages/profile/profile_tab.dart';
 import 'package:marhapass/src/pages/register_page.dart';
 
 void main() {
@@ -13,12 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Meu App de Senhas',
+      title: 'MarhaApp',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        scaffoldBackgroundColor: Colors.grey[200],
+      ),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const SigninPage(),
+        '/': (context) => const SignInScreenPage(),
         '/register': (context) => const UserRegisterPage(),
-        '/profile': (context) => const Profile()
+        '/profile': (context) => const ProfileTab()
       },
     );
   }
