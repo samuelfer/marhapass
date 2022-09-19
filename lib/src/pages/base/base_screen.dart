@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:marhapass/src/pages/auth/sign_in_screen.dart';
 import 'package:marhapass/src/pages/home/home_tab.dart';
+import 'package:marhapass/src/pages/profile/profile_tab.dart';
 
 import '../passwords/pass_tab.dart';
 
@@ -21,11 +22,11 @@ class _BaseScreenState extends State<BaseScreen> {
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
-        children: [
-          const HomeTab(),
-          const HomeTab(),
-          const PasswordTab(),
-          Container(color: Colors.green),
+        children: const [
+          HomeTab(),
+          HomeTab(),
+          PasswordTab(),
+          ProfileTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

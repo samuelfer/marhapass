@@ -50,17 +50,9 @@ class PasswordTab extends StatelessWidget {
                 ),
                 backgroundColor: const Color.fromRGBO(63, 81, 126, 5),
               ),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const HomeTab();
-                    },
-                  ),
-                );
-              },
+              onPressed: () {},
               child: const Text(
-                "Cadastrar novo",
+                "Novo Cadastro",
                 style: TextStyle(
                   fontSize: 18,
                 ),
